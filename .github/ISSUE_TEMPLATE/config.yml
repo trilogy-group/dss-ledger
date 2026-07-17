@@ -1,0 +1,14 @@
+blank_issues_enabled: true
+contact_links:
+  - name: rebl3 front door (GET /skill)
+    url: https://data-source-skills.vercel.app/rebl3/skill
+    about: The rebl3 skill's public front door — read the dictionary and enablement here before filing.
+  - name: red2 front door (GET /skill)
+    url: https://data-source-skills.vercel.app/red2/skill
+    about: The red2 skill's public front door — read the dictionary and enablement here before filing.
+  - name: aerie front door (GET /skill)
+    url: https://data-source-skills.vercel.app/aerie/skill
+    about: The aerie skill's public front door — read the dictionary and enablement here before filing.
+  - name: redshift front door (GET /skill)
+    url: https://data-source-skills.vercel.app/redshift/skill
+    about: The redshift skill's public front door — read the dictionary and enablement here before filing.
