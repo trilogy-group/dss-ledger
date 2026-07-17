@@ -1,0 +1,3 @@
+# dss-ledger
+
+Feedback ledger for the Alpha data source skills. Each skill wraps one data source in an honesty layer (dictionary + enablement + a public front door) so a cold agent can build real business cases against the wire. The four skills are **rebl3**, **red2**, **aerie**, and **redshift**. Their front doors live at `https://data-source-skills.vercel.app/{rebl3,red2,aerie,redshift}/skill`. File defects and asks here as issues, one label per skill. Standing rule: issue bodies carry field **names** never data **values** — describe the shape of the problem, never paste a person-identifying record. Reports filed here may graduate into the skills' cold-agent eval cases.
