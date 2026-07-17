@@ -1,0 +1,46 @@
+name: redshift report
+description: File a defect or ask against the redshift (klair_redshift) data source skill.
+title: "[redshift] "
+labels: [redshift]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report a defect or ask for the **redshift** skill. Front door: https://data-source-skills.vercel.app/redshift/skill
+
+        **Standing rule:** describe the shape of the problem with field NAMES, never data VALUES. Do not paste a person-identifying record (a real name, email, or home address).
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - data defect
+        - "skill defect: incomplete"
+        - "skill defect: non-compliant"
+        - "skill defect: confusing"
+        - ask / feedback
+    validations:
+      required: true
+  - type: textarea
+    id: location
+    attributes:
+      label: Location
+      description: Where it lives — a file + section, or a schema.table.field.
+      placeholder: "e.g. redshift/DICTIONARY.md § keys; or fct_pl.school_id"
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: The SQL you ran and what you saw. Field NAMES only — never data values.
+      placeholder: "SELECT COUNT(*) ... fct_pl.school_id -> 100% NULL (2769/2769)"
+    validations:
+      required: true
+  - type: input
+    id: doc-sha
+    attributes:
+      label: Doc SHA
+      description: The X-Doc-SHA256 you read (optional).
+    validations:
+      required: false
