@@ -1,0 +1,46 @@
+name: rebl3 report
+description: File a defect or ask against the rebl3 data source skill.
+title: "[rebl3] "
+labels: [rebl3]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Report a defect or ask for the **rebl3** skill. Front door: https://data-source-skills.vercel.app/rebl3/skill
+
+        **Standing rule:** describe the shape of the problem with field NAMES, never data VALUES. Do not paste a person-identifying record (a real name, email, or home address).
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - data defect
+        - "skill defect: incomplete"
+        - "skill defect: non-compliant"
+        - "skill defect: confusing"
+        - ask / feedback
+    validations:
+      required: true
+  - type: textarea
+    id: location
+    attributes:
+      label: Location
+      description: Where it lives — a file + section, or a table / field / route.
+      placeholder: "e.g. rebl3/DICTIONARY.md § site filters; or /v2/sites ?state="
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: What you ran and what you saw. Field NAMES only — never data values.
+      placeholder: "GET /v2/sites?state=tx -> 200 with 0 rows, no error (expected uppercase TX)"
+    validations:
+      required: true
+  - type: input
+    id: doc-sha
+    attributes:
+      label: Doc SHA
+      description: The X-Doc-SHA256 you read (optional).
+    validations:
+      required: false
